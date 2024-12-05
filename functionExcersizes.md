@@ -1,4 +1,4 @@
-Functions Excersize.
+# Functions Excersize.
 
 1. have function that should console.log Hello World.
 

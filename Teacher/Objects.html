@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+    <script>
+const product = {
+    name: 'shirt',
+    deliveryDay: '1 day',
+    rating:{
+        stars: 4.5,
+        count: 87
+    },
+    fun: function function1 (){
+        console.log('fucntion inside Object')
+    }
+}
+
+console.log(product)
+
+const josnString = JSON.stringify(product);
+// not containg the function
+
+console.log(josnString)
+
+const jsonParse = JSON.parse(josnString)
+
+console.log(jsonParse)
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -70,6 +70,8 @@
         score.ties += 1
     }
 
+        // below was added for LocalStorage
+
     localStorage.setItem('score', JSON.stringify(score))
 
     alert(`You Picked ${playerMove}, Computer Picked ${computerMove}, Results: ${result}

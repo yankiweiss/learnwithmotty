@@ -13,19 +13,25 @@
     <button type="button" onclick="playGame('scissors')">scissors</button>
     <!--below button has been added for Object Course -->
     <button onclick="
-    score.wins =0;
+    localStorage.removeItem('score')
+    score.wins = 0;
     score.looses =0;
-    score.ties = 0;
+    score.ties =0;
     ">Reset Button</button>
 
 <script>
 
     // below untill line # 22 was added for the Objects Class
-    const score = {
+    let score =  JSON.parse(localStorage.getItem('score'))
+
+    if(!score){
+        score = {
         wins: 0,
         looses: 0,
         ties: 0
-    };
+    }
+}
+
 
     function playGame (playerMove){
     const computerMove = pickComputerMove();
@@ -63,6 +69,9 @@
     }else if (result === 'Tie'){
         score.ties += 1
     }
+
+    localStorage.setItem('score', JSON.stringify(score))
+
     alert(`You Picked ${playerMove}, Computer Picked ${computerMove}, Results: ${result}
 Wins: ${score.wins} Looses: ${score.looses} Ties: ${score.ties}`)
     }

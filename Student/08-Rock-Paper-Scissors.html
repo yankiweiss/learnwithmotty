@@ -21,16 +21,23 @@
 
 <script>
 
+    /* let score = {
+    wins: 0,
+    looses: 0,
+    ties: 0
+  }*/
+
     // below untill line # 22 was added for the Objects Class
     let score =  JSON.parse(localStorage.getItem('score'))
 
+/*
     if(!score){
         score = {
         wins: 0,
         looses: 0,
         ties: 0
     }
-}
+}*/
 
 
     function playGame (playerMove){
@@ -70,7 +77,7 @@
         score.ties += 1
     }
 
-        // below was added for LocalStorage
+        // below was added for LocalStorage, check in dev tools in Application tab.
 
     localStorage.setItem('score', JSON.stringify(score))
 

@@ -12,6 +12,8 @@
 
 
     <script>
+
+
 const product = {
     name: 'shirt',
     deliveryDay: '1 day',
@@ -35,7 +37,20 @@ const jsonParse = JSON.parse(josnString)
 
 console.log(jsonParse)
 
+// simple Local Storage Example.
 
+localStorage.setItem('hello', 'hello');
+
+// local stroage on a Object
+
+
+localStorage.setItem('product', JSON.stringify(product))
+
+// getting back a local storage JSON string and converting to Object
+
+let jsonParse1 = JSON.parse(localStorage.getItem('product'))
+
+console.log(jsonParse1)
 
     </script>
     

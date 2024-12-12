@@ -7,11 +7,39 @@
 </head>
 <body>
     <button>Hello</button>
+    <button class="js-button">Second Button</button>
 
     <script>
 
+         
+/*
         document.body.innerHTML = 'Hello - The body has been Modified with DOM';
         document.title = 'Good Job!'
+
+
+console.log(document.title)
+document.title = 'Changed!'
+
+console.log(document.body)
+
+console.log(document.body.innerHTML)
+
+// important 
+
+document.body.innerHTML = '<button>Good Job!</button>';
+
+*/
+
+console.log(document.querySelector('button').innerHTML)
+
+document.querySelector('button').innerHTML = 'Changed!'
+
+console.log(document.querySelector('.js-button'))
+
+const buttonElement = document.querySelector('.js-button');
+
+buttonElement.innerHTML = 'Second Button Text Changed!'
+
     </script>
     
 </body>

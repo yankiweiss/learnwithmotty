@@ -9,18 +9,30 @@
 
     <p>YouTube Subscribe Button</p>
 
-    <button class="js-subscribe-button" onclick="
-    const subscribeBtn =  document.querySelector('.js-subscribe-button');
+    <button class="js-subscribe-button" onclick="subscribe()">Subscribe</button>
 
+    <!--<button class="js-subscribe-button" onclick="    
+    const subscribeBtn =  document.querySelector('.js-subscribe-button');
     if (subscribeBtn.innerHTML === 'Subscribe'){
         subscribeBtn.innerHTML = 'Subcribed'
     }else{
         subscribeBtn.innerHTML = 'Subscribe'
-    }
-    ">Subscribe</button>
+   }
+    ">Subscribe</button>-->
 
 
     <script>
+
+        function subscribe(){
+            const subscribeBtn =  document.querySelector('.js-subscribe-button');
+
+            if (subscribeBtn.innerHTML === 'Subscribe'){
+             subscribeBtn.innerHTML = 'Subcribed'
+            }else{
+        subscribeBtn.innerHTML = 'Subscribe'
+        }
+
+        }
       
 
     </script>

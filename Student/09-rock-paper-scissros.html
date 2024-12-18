@@ -11,6 +11,8 @@
     <button type="button" onclick="playGame('rock')">Rock</button>
     <button type="button" onclick="playGame('paper')">Paper</button>
     <button type="button" onclick="playGame('scissors')">Scissors</button>
+
+    <p class="js-score"></p>
     <!--below button has been added for Object Course -->
     <button onclick="
     localStorage.removeItem('score')
@@ -88,8 +90,15 @@
 
     localStorage.setItem('score', JSON.stringify(score))
 
+    updateScore()
+
     alert(`You Picked ${playerMove}, Computer Picked ${computerMove}, Results: ${result}
 Wins: ${score.wins} Looses: ${score.looses} Ties: ${score.ties}`)
+    }
+
+    function updateScore () {
+       document.querySelector('.js-score').innerHTML = 
+       `Wins: ${score.wins} Looses: ${score.looses} Ties: ${score.ties}` 
     }
 
     function pickComputerMove () {

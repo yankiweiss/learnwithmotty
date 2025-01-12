@@ -10,7 +10,7 @@
 
 # Excersizes 
 
-1. create a <button>0909-DOM</button> and then console.log the Button.
+1. create a Button with the letters <button>0909-DOM</button> and then console.log the Button.
 
 2. then create a new Button <button>0909-DOM-1</button> and change the text to 'excersize 2 of the DOM Done!'.
 
